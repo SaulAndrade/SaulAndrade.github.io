@@ -1,0 +1,63 @@
+.BurguerButton {
+  width: 64px;
+  height: 64px;
+  background-color: var(--button-color);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--button-border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color ease-in-out 1s;
+}
+.BurguerButton span {
+  margin: 4px 0;
+  display: block;
+  width: 80%;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+
+.BurguerButton span:first-child {
+  transition: transform ease-out 100ms, margin ease-out 300ms;
+}
+
+.BurguerButton span:nth-child(2) {
+  transition: transform ease-out 500ms, margin ease-out 300ms;
+}
+
+.BurguerButton span:last-child {
+  transition: transform ease-out 100ms, margin ease-out 300ms;
+}
+
+.ButtonActive {
+  background-color: var(--button-active-color);
+  transition: background-color ease-in-out 1s;
+}
+
+span.SpanHovered {
+  margin: 10px 0;
+}
+
+.SpanActiveTop {
+  margin: 0;
+  transform: translateY(10px) rotateZ(45deg);
+  transition: transform ease-out 100ms;
+}
+
+.SpanActiveMiddle {
+  margin: 0;
+  transform: rotatez(calc(3*360deg - 45deg));
+  transition: transform ease-out 500ms;
+}
+
+.SpanActiveBottom {
+  margin: 0;
+  transform: translateY(-10px) rotateZ(45deg);
+  transition: transform ease-out 100ms;
+}

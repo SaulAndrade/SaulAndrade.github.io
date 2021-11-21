@@ -16,7 +16,7 @@
 .BurguerButton span {
   margin: 4px 0;
   display: block;
-  width: 80%;
+  width: 70%;
   background-color: white;
   border: 1px solid white;
   border-radius: 10px;
@@ -41,7 +41,7 @@
 }
 
 span.SpanHovered {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .SpanActiveTop {

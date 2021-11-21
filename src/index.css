@@ -3,8 +3,12 @@ html {
 }
 
 *, *:before, *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
   --button-color:rgb(37, 37, 37);
   --button-active-color: rgba(0,0,0,0.5);
   --button-border-color: black;
+  --nav-bg-color: rgb(233, 236, 61);
+  --content-bg-color: rgb(148, 144, 144);
 }

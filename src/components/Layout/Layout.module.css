@@ -1,11 +1,12 @@
 .Layout {
-  padding: 1rem 6rem; 
   display: flex;
   flex-direction: column;
-  min-width: 210px;
+  min-width: 260px;
 }
 
 .Layout nav {
+  background-color: var(--nav-bg-color);
+  padding: 0 4rem;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -35,25 +36,24 @@
   justify-content: space-between;
 }
 
-.NavLinks {
+.Links {
   display: flex;
-}
-
-.NavLinks div {
-  margin: 1rem;
 }
 
 .SocialMediaContainer {
   display: flex;
+  align-items: center;
   margin-left: 2rem;
 }
 
-.SocialMediaContainer div {
-  margin: 1rem;
+.Content {
+  padding: 2rem 4rem;
+  min-height: calc(100vh - 4rem);
+  background-color: var(--content-bg-color);
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .BurguerButtonContainer {
     display: flex;
     align-items: center;

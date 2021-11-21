@@ -1,11 +1,14 @@
 import React from 'react'
 
-import BurguerButton from '../BurguerButton/BurguerButton';
+import BurguerButton from '../BurguerButton/BurguerButton'
+import NavLinks from '../NavLinks/NavLinks'
+import NavIcons from '../NavIcons/NavIcons'
 
 import Logo from '../../img/logo.png'
 import classes from './Layout.module.css'
 
 const Layout = ({children}) => {
+
   return (
     <div className={classes.Layout}>
 
@@ -15,16 +18,12 @@ const Layout = ({children}) => {
         </div>
 
         <div className={classes.Navbar}>
-          <div className={classes.NavLinks}>
-            <div>Home</div>
-            <div>Resumé</div>
-            <div>Projects</div>
-            <div>Contact</div>
+          <div className={classes.Links}>
+            <NavLinks size='1rem' spacing='.25rem'/>
           </div>
 
           <div className={classes.SocialMediaContainer}>
-            <div>LinkedIn</div>
-            <div>GitHub</div>
+            <NavIcons width='3rem' height='3rem'/>
           </div>
         </div>
         

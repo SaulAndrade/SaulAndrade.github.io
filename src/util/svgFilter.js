@@ -140,6 +140,9 @@ class Color {
         case b:
           h = (r - g) / d + 4;
           break;
+          
+        default:
+          console.log('default');
       }
       h /= 6;
     }

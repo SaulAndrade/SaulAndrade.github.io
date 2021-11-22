@@ -11,7 +11,6 @@ const Layout = ({children}) => {
 
   return (
     <div className={classes.Layout}>
-
       <nav>
         <div className={classes.LogoContainer}>
           <img src={Logo} alt="Saul's awesome Portfolio"/>
@@ -22,13 +21,13 @@ const Layout = ({children}) => {
             <NavLinks size='1rem' spacing='.25rem'/>
           </div>
 
-          <div className={classes.SocialMediaContainer}>
+        <div className={classes.SocialMediaContainer}>
             <NavIcons width='3rem' height='3rem'/>
           </div>
         </div>
         
         <div className={classes.BurguerButtonContainer}>
-                <BurguerButton />
+          <BurguerButton />
         </div>
       </nav>
 

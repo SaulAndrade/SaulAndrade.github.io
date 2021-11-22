@@ -1,3 +1,14 @@
 .NavLink {
   margin-right: 1rem;
 }
+
+@media (max-width: 600px) {
+  .NavLink {
+    margin-right: 0;
+    margin-top: 4rem;
+  }
+
+  .NavLink:first-child {
+    margin-top: 0;
+  }
+}

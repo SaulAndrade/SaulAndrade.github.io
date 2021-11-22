@@ -1,0 +1,42 @@
+.Curtain {
+  position: fixed;
+  padding-top: 6rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--curtain-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform ease-out 300ms, opacity ease-out 500ms;
+}
+
+.MenuContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.SocialMediaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.Open {
+  transform: translateY(0);
+  opacity: 100%;
+  transition: transform ease-out 300ms, opacity ease-out 500ms;
+}
+
+/* mobile curtain must not show on big screens */
+@media (min-width: 600px) {
+  .Curtain {
+    display: none;
+  }
+}

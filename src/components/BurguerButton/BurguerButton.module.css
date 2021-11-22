@@ -1,4 +1,5 @@
 .BurguerButton {
+  position: relative;
   width: 64px;
   height: 64px;
   background-color: var(--button-color);
@@ -12,6 +13,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color ease-in-out 1s;
+  z-index: 2;
 }
 .BurguerButton span {
   margin: 4px 0;

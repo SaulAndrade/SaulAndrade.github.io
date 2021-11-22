@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Curtain from '../Curtain/Curtain';
+
 import classes from './BurguerButton.module.css'
 
 const BurguerButton = () => {
@@ -21,14 +23,18 @@ const BurguerButton = () => {
   
 
   return (
-    <div className={buttonClasses.join(' ')} 
-    onClick={toggleButtonHandler} 
-    onMouseEnter={()=>setButtonHovered(true)}
-    onMouseLeave={()=>setButtonHovered(false)}>
-      <span className={buttonActive?classes.SpanActiveTop:spanBaseClass}></span>
-      <span className={buttonActive?classes.SpanActiveMiddle:spanBaseClass}></span>
-      <span className={buttonActive?classes.SpanActiveBottom:spanBaseClass}></span>
-    </div>
+    <React.Fragment>
+      <Curtain show={ buttonActive }/>
+
+      <div className={buttonClasses.join(' ')} 
+      onClick={toggleButtonHandler} 
+      onMouseEnter={()=>setButtonHovered(true)}
+      onMouseLeave={()=>setButtonHovered(false)}> 
+        <span className={buttonActive?classes.SpanActiveTop:spanBaseClass}></span>
+        <span className={buttonActive?classes.SpanActiveMiddle:spanBaseClass}></span>
+        <span className={buttonActive?classes.SpanActiveBottom:spanBaseClass}></span>
+      </div>
+    </React.Fragment>
   );
 };
 

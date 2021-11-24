@@ -15,6 +15,12 @@
   transition: background-color ease-in-out 1s;
   z-index: 2;
 }
+
+.ButtonActive {
+  background-color: var(--button-active-color);
+  transition: background-color ease-in-out 1s;
+}
+
 .BurguerButton span {
   margin: 4px 0;
   display: block;
@@ -24,42 +30,50 @@
   border-radius: 10px;
 }
 
-
-.BurguerButton span:first-child {
-  transition: transform ease-out 100ms, margin ease-out 300ms;
+/* hover over inactive button */
+.BurguerButton:not(.ButtonActive) span:nth-child(2) {
+  transition: margin ease-in-out 200ms;
 }
 
-.BurguerButton span:nth-child(2) {
-  transition: transform ease-out 500ms, margin ease-out 300ms;
+.BurguerButton:not(.ButtonActive):hover span:nth-child(2) {
+  margin: 10px 0;
+  transition: margin ease-in-out 200ms;
 }
 
-.BurguerButton span:last-child {
-  transition: transform ease-out 100ms, margin ease-out 300ms;
-}
-
-.ButtonActive {
-  background-color: var(--button-active-color);
-  transition: background-color ease-in-out 1s;
-}
-
-span.SpanHovered {
-  margin: 8px 0;
-}
-
-.SpanActiveTop {
+/* active button transition */
+.BurguerButton.ButtonActive span:first-child {
   margin: 0;
-  transform: translateY(10px) rotateZ(45deg);
+  transform: translateY(2px) rotateZ(45deg);
   transition: transform ease-out 100ms;
 }
 
-.SpanActiveMiddle {
+.BurguerButton.ButtonActive span:nth-child(2) {
   margin: 0;
   transform: rotatez(calc(3*360deg - 45deg));
   transition: transform ease-out 500ms;
 }
 
-.SpanActiveBottom {
+.BurguerButton.ButtonActive span:last-child {
   margin: 0;
-  transform: translateY(-10px) rotateZ(45deg);
+  transform: translateY(-2px) rotateZ(45deg);
+  transition: transform ease-out 100ms;
+}
+
+/* hover over active button */
+.BurguerButton.ButtonActive:hover span:first-child {
+  margin: 0;
+  transform: translateY(2px) rotateZ(45deg) skew(5deg, 5deg);
+  transition: transform ease-out 100ms;
+}
+
+.BurguerButton.ButtonActive:hover span:nth-child(2) {
+  margin: 0;
+  transform: rotatez(calc(3*360deg - 45deg)) skew(5deg, 5deg);
+  transition: transform ease-out 500ms;
+}
+
+.BurguerButton.ButtonActive:hover span:last-child {
+  margin: 0;
+  transform: translateY(-2px) rotateZ(45deg) skew(5deg, 5deg);
   transition: transform ease-out 100ms;
 }

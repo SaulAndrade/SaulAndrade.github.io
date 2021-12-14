@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 
 import Curtain from '../Curtain/Curtain';
-
-import classes from './BurguerButton.module.css'
+import { toggle } from '../../store/bButton/bButton'
 
 const BurguerButton = () => {
-  const [ buttonClasses, setButtonClasses ] = useState([ classes.BurguerButton ])
-  const [ buttonActive, setButtonActive ] = useState (false)
+  const buttonClasses = useSelector(state=>state.bButton.buttonClasses)
+  const buttonActive = useSelector(state=>state.bButton.buttonActive)
+  const dispatch = useDispatch()
 
-  const toggleButtonHandler = () => {
-    if (buttonClasses.includes(classes.ButtonActive)){
-      setButtonClasses([classes.BurguerButton])
-      setButtonActive(false)
-      return
-    }
-    setButtonClasses([ classes.BurguerButton, classes.ButtonActive ])
-    setButtonActive(true)
-}
-
+  console.log(buttonClasses)
   return (
     <React.Fragment>
-      <Curtain show={ buttonActive }/>
+      <Curtain show={ buttonActive } />
 
-      <div className={buttonClasses.join(' ')} onClick={toggleButtonHandler}> 
+      <div className={buttonClasses.join(' ')} onClick={()=>{dispatch(toggle())}}> 
         <span></span>
         <span></span>
         <span></span>

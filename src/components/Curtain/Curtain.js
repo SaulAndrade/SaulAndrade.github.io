@@ -14,7 +14,7 @@ const Curtain = ({show}) => {
     <div className={curtainClasses.join(' ')}>
 
       <div className={classes.MenuContainer}>
-        <NavLinks size='3rem' spacing='.25rem'/>
+        <NavLinks size='3rem' spacing='.25rem' />
       </div>
 
       <div className={classes.SocialMediaContainer}>

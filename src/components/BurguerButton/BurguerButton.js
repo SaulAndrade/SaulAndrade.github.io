@@ -9,7 +9,6 @@ const BurguerButton = () => {
   const buttonActive = useSelector(state=>state.bButton.buttonActive)
   const dispatch = useDispatch()
 
-  console.log(buttonClasses)
   return (
     <React.Fragment>
       <Curtain show={ buttonActive } />

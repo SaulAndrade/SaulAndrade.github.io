@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Layout from './components/Layout/Layout';
 import AboutPage from './pages/About'
@@ -11,10 +11,10 @@ function App() {
     <div>
       <Layout>
         <Routes>
-          <Route path='/about' element={ <AboutPage /> } />  
-          <Route path='/projects' element={ <ProjectsPage /> } />
-          <Route path='/contact' element={ <ContactPage /> } />
-          <Route path='/' element={ <AboutPage /> } />  
+          <Route path='about' element={ <AboutPage /> } />  
+          <Route path='projects' element={ <ProjectsPage /> } />
+          <Route path='contact' element={ <ContactPage /> } />
+          <Route path='*' element={ <Navigate to='about'/> } />  
         </Routes>
       </Layout>
     </div>

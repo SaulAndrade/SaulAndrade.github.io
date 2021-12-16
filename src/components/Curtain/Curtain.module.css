@@ -30,7 +30,7 @@
 
 .Open {
   transform: translateY(0);
-  opacity: 100%;
+  opacity: 1;
   transition: transform ease-out 300ms, opacity ease-out 500ms;
 }
 

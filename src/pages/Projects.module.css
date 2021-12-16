@@ -1,0 +1,20 @@
+.Projects {
+  padding: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 371px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.CallToAct p {
+  margin: .25rem 0;
+  text-align: center;
+}
+
+.CallToAct {
+  align-self: center;
+  text-align: center;
+}

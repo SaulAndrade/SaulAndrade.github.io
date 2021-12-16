@@ -1,0 +1,17 @@
+.Crumb {
+  padding: .2rem;
+  border: 1px solid black;
+  border-color: var(--crumb-border-color);
+  border-radius: 3px;
+  box-shadow: 1px 2px 0 1px var(--crumb-shadow-color);
+  background-color: var(--crumb-background-color);
+  cursor: pointer;
+}
+
+.Crumb:hover {
+  background-color: white;
+}
+
+.Active {
+  background-color: white;
+}

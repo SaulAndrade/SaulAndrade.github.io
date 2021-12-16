@@ -1,0 +1,6 @@
+.Crumbs {
+  display: flex;
+  gap: .25rem;
+  flex-wrap: wrap;
+  margin: .5rem 0;
+}

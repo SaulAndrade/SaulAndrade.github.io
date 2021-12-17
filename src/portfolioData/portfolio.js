@@ -1,4 +1,4 @@
-export const c = {
+const c = {
   reactjs:'ReactJS',
   js:'Javascript',
   git:'Git',
@@ -25,6 +25,16 @@ export const c = {
   gamedesign:'Game Design'
 }
 
+const getCrumbs = (portfolio) => {
+  const flatPortfolio = portfolio.reduce((prev, cur)=>{
+    if (!(prev.crumbs)){
+      return [...cur.crumbs]
+    }
+    return [...prev.crumbs, ...cur.crumbs]
+  }, [])
+  const uniqueCrumbs = [...new Set(flatPortfolio)]
+  return uniqueCrumbs
+}
 
 const portfolio = [
   {
@@ -68,10 +78,12 @@ const portfolio = [
     description: '',
     images: [],
     about:'',
-    crumbs: [c.js, c.mongodb, c.reactjs, c.html5, c.css3, c.git, c.gitHub],
+    crumbs: [c.js, c.mongodb, c.reactjs, c.html5, c.css3, c.git, c.gitHub, c.html5, c.less],
     onlineAt:'',
     gitHub:''
   }
 ]
+
+export const crumbs = getCrumbs(portfolio)
 
 export default portfolio

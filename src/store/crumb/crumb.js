@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import portfolioData, {c as crumbs} from '../../portfolioData/portfolio'
+import portfolioData, { crumbs } from '../../portfolioData/portfolio'
 
 const initialState = {
   activeCrumb: '',

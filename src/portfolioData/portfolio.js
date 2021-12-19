@@ -1,3 +1,8 @@
+import img1 from './img/1.jpg'
+import img2 from './img/2.jpg'
+import img3 from './img/3.jpg'
+import img4 from './img/4.jpg'
+
 const c = {
   reactjs:'ReactJS',
   js:'Javascript',
@@ -13,7 +18,7 @@ const c = {
   html5:'HTML5',
   css3:'CSS3',
   saas:'SAAS',
-  less:'less',
+  less:'LESS',
   antd:'Ant Design',
   mongodb: 'MongoDB',
   mongore: 'Mongo Realm',
@@ -32,30 +37,33 @@ const getCrumbs = (portfolio) => {
     }
     return [...prev.crumbs, ...cur.crumbs]
   }, [])
-  const uniqueCrumbs = [...new Set(flatPortfolio)]
+  const uniqueCrumbs = [...new Set(flatPortfolio)].sort()
   return uniqueCrumbs
 }
 
 const portfolio = [
   {
+    id: '1',
     title:'teste',
     description: '',
-    images: [],
+    images: [img1, img2],
     about:'',
     crumbs: [c.js, c.mongodb, c.reactjs, c.html5, c.css3, c.git, c.gitHub],
     onlineAt:'',
     gitHub:''
   },
   {
+    id: '2',
     title:'teste1',
     description: '',
-    images: [],
+    images: [img3, img4],
     about:'',
     crumbs: [c.js, c.mongodb, c.reactjs, c.html5, c.css3, c.git, c.gitHub],
     onlineAt:'',
     gitHub:''
   },
   {
+    id: '3',
     title:'teste2',
     description: '',
     images: [],
@@ -65,6 +73,7 @@ const portfolio = [
     gitHub:''
   },
   {
+    id: '4',
     title:'teste3',
     description: '',
     images: [],
@@ -74,6 +83,7 @@ const portfolio = [
     gitHub:''
   },
   {
+    id: '5',
     title:'teste4',
     description: '',
     images: [],

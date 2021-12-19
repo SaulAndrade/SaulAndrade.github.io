@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Crumbs from '../components/Crumbs/Crumbs';
-
+import Crumbs from '../components/Crumbs/Crumbs'
+import ProjGrid from '../components/ProjGrid/ProjGrid'
+import portfolioData, { crumbs } from '../portfolioData/portfolio'
 import classes from './Projects.module.css'
 
 const Projects = () => {
@@ -16,9 +17,9 @@ const Projects = () => {
         &nbsp;<a target='_blank' rel='noreferrer' href='https://github.com/SaulAndrade'>GitHub</a> page.
       </h2>
 
-      <Crumbs />
+      <Crumbs crumbList={crumbs} />
 
-      <div>Projects List</div>
+      <ProjGrid portfolioData={portfolioData} />
       
       <div className={classes.CallToAct}>
         <h3>Got a project?</h3>

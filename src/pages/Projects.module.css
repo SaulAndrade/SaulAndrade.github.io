@@ -15,6 +15,13 @@ h1 {
 }
 
 .CallToAct {
+  margin-top: 2rem;
   align-self: center;
   text-align: center;
+}
+
+@media (max-width: 862px) {
+  .Projects {
+    padding: 2rem 2rem;
+  }
 }

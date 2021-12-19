@@ -1,14 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
-import portfolioData, { crumbs } from '../../portfolioData/portfolio'
 
 const initialState = {
   activeCrumb: '',
-  crumbs: crumbs,
-  projects: portfolioData
 }
 
 const setActiveCrumbHandler = (state, action) => {
-  return { ...state, activeCrumb: action.payload }
+  const newActiveCrumb = action.payload === state.activeCrumb ? '' : action.payload
+  return { ...state, activeCrumb: newActiveCrumb }
 }
 
 export const crumbSlice = createSlice({

@@ -17,7 +17,7 @@ const About = () => {
             <p>Check out my Portfolio at the <Link to='/projects'>projects</Link> page.
               There's a lot of interesting stuff there, including the source code for this
               very own website.</p>
-            <p>If you want you want to get in touch, just visit the&nbsp;
+            <p>If you want to get in touch, just visit the&nbsp;
               <Link to='/contact'>contact</Link> page or send a message to saul.a.andrade@gmail.com</p>
           </div>
           <h2>Saul Andrade.</h2>

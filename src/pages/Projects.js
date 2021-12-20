@@ -1,14 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
+import ActionCurtain from '../components/ActionCurtain/ActionCurtain'
 import Crumbs from '../components/Crumbs/Crumbs'
 import ProjGrid from '../components/ProjGrid/ProjGrid'
 import portfolioData, { crumbs } from '../portfolioData/portfolio'
 import classes from './Projects.module.css'
 
 const Projects = () => {
+  const filter = useSelector(state=>state.crumb.activeCrumb)
+  let filteredPortfolio = filter? portfolioData.filter(proj => proj.crumbs.includes(filter)) : portfolioData
+
   return (
     <div className={classes.Projects}>
+      <ActionCurtain text={filter?`FILTERING ${filter.toUpperCase()} PROJECTS` : 'ALL PROJECTS'} />
 
       <h1>.web developer portfolio</h1>
 
@@ -19,7 +25,7 @@ const Projects = () => {
 
       <Crumbs crumbList={crumbs} />
 
-      <ProjGrid portfolioData={portfolioData} />
+      <ProjGrid portfolioData={filteredPortfolio} />
       
       <div className={classes.CallToAct}>
         <h3>Got a project?</h3>

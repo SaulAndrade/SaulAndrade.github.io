@@ -1,0 +1,54 @@
+.ActionCurtain {
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  z-index: 1;
+}
+
+.ActionCurtain div:first-child{
+  position: relative;
+  align-self: flex-start;
+  background-color: black;
+  height: 50%;
+  width: 0;
+  z-index: 1;
+  transition: width ease-out 300ms;
+}
+
+.ActionCurtain div:last-child{
+  position: relative;
+  align-self: flex-end;
+  background-color: grey;
+  height: 50%;
+  width: 0;
+  z-index: 1;
+  transition: width ease-out 300ms;
+}
+
+.ActionText {
+  color: white;
+  opacity: 0;
+  font-size: 40px;
+  position: absolute;
+  align-self: center;
+  z-index: 2;
+}
+
+.ActionCurtain div.ShowSlider {
+  width:100%;
+  transition: width ease-out 300ms;
+}
+
+.ActionText.ShowText {
+  opacity: 1;
+  transition: opacity ease-out 100ms 300ms;
+}
+
+.ActionCurtain.Obliterate {
+  opacity: 0;
+  z-index: -1;
+}

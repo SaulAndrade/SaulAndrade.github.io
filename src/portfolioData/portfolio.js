@@ -48,7 +48,7 @@ const portfolio = [
     description: '',
     images: [img1, img2],
     about:'',
-    crumbs: [c.js, c.mongodb, c.reactjs, c.html5, c.css3, c.git, c.gitHub],
+    crumbs: [c.mongodb, c.reactjs, c.html5, c.css3, c.git, c.gitHub],
     onlineAt:'',
     gitHub:''
   },

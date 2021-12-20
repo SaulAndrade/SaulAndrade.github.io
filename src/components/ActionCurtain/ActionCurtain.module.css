@@ -1,12 +1,15 @@
 .ActionCurtain {
   display: flex;
+  position:fixed;
+  top: 0;
+  left: 0;
   opacity: 1;
   flex-direction: column;
   position: fixed;
   width: 100%;
   height: 100%;
   justify-content: center;
-  z-index: 1;
+  z-index: 3;
 }
 
 .ActionCurtain div:first-child{
@@ -15,7 +18,7 @@
   background-color: black;
   height: 50%;
   width: 0;
-  z-index: 1;
+  z-index: 3;
   transition: width ease-out 300ms;
 }
 
@@ -25,7 +28,7 @@
   background-color: grey;
   height: 50%;
   width: 0;
-  z-index: 1;
+  z-index: 3;
   transition: width ease-out 300ms;
 }
 
@@ -35,7 +38,7 @@
   font-size: 40px;
   position: absolute;
   align-self: center;
-  z-index: 2;
+  z-index: 4;
 }
 
 .ActionCurtain div.ShowSlider {

@@ -8,7 +8,6 @@ import ContactPage from './pages/Contact'
 
 function App() {
   return (
-    <div>
       <Layout>
         <Routes>
           <Route path='*' element={ <Navigate to='/'/> } />  
@@ -17,7 +16,6 @@ function App() {
           <Route path='/contact' element={ <ContactPage /> } />
         </Routes>
       </Layout>
-    </div>
   );
 }
 

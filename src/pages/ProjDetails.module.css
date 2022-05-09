@@ -1,0 +1,28 @@
+.ProjDetails {
+  padding: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 371px;
+}
+
+ul {
+  list-style-position:inside;
+  list-style-type: circle;
+}
+
+li > span {
+  display: inline-block;
+  text-align: end;
+}
+
+hr {
+  color: black;
+  width: 50%;
+} 
+
+@media (max-width: 862px) {
+  .ProjDetails {
+    padding: 2rem 2rem;
+  
+  }
+}
